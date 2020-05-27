@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background: linear-gradient(-45deg,lightgreen, lightblue);
+    height:100vh;
+    width:100%;
+    text-shadow:2px 2px 1px gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+header{
+    font-size: 4em;
+    text-align: center;
+    padding: .2em;
+}
+
+.info{
+    display: none;
+}
+
+
+.random-site-lists{
+    list-style: none;
+    text-align: center;
+    height: 70vh;
+}
+
+
+.random-site-list{
+    margin: 5em;
+    text-align: center;
+    height: 100px;
+}
+
+.link{
+    padding:1em 2.5em;
+    border: solid yellow 4px;
+    border-radius: 10%;
+    text-decoration: none;
+    background: orange;
+    color: white;
+    transition-property: width 3s;
+}
+
+.link:hover{
+    width:300px;
+}
