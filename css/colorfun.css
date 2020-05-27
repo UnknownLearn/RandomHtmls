@@ -1,0 +1,66 @@
+.back{
+    padding:.5em 1.5em;
+    border: solid lightcyan 2px;
+    border-radius: 10%;
+    text-decoration: none;  
+    background: rgba(134, 129, 129,.5);
+    color: white;
+    position: fixed;
+    top:0;
+
+}
+
+.colorbox{
+    height: 50vh;
+    width: 95vw;
+    background: black;
+    margin:auto;
+    color: white;
+    text-align: center;
+}
+
+
+.q-colorbox{
+    background: white;
+    height: 75%;
+    text-align: center;
+}
+
+.q-colorbox p{
+    height: 25%;
+}
+.question-mark{
+    font-size: 7em;
+    color: gray;
+
+}
+#answer{
+    font-size: 3em;
+    height: 25%;
+}
+ul{
+  margin-top: 2em;
+  width: 100%;
+}
+.color-list li{
+    display: inline-block;
+    width: 30%;
+    height:7em;
+    background: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.red{
+    margin-left: 2.5%;
+    margin-right: 2%;
+}
+.green{
+    margin-left: 2%;
+}
+
+.color-list li button{
+    
+    width: 30%;
+    font-size: 2em;
+}
