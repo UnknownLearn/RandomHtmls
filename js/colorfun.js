@@ -99,6 +99,7 @@ function getSend(x,y){
         coverPage.style.display="block";
         document.querySelector(".click-number").innerText=clickCount;
         document.querySelector(".winner").innerText=colorValue;
+        document.querySelector(".page-cover").style.backgroundColor=questionColor;
     }
     
 }

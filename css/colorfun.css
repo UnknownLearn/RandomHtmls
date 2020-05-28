@@ -159,3 +159,16 @@ ul{
     color: white;
     box-shadow: 2px 2px 4px white;
 }
+
+@media only screen and (max-width :765px){
+    .menu-btn{
+        display: inline-flex;
+        margin-bottom: 1em;
+    }
+
+    .click-number{
+        color: wheat;
+        font-size: 3em;
+    }
+
+}
