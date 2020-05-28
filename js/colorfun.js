@@ -3,6 +3,7 @@ var hex=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 var x,y;
 
 var questionColor='#';//question color 
+var checkColor//answer
 var eachHex=[];//for selection
 var incorrectHex=[[],[]];
 
@@ -16,8 +17,10 @@ for(let i=0;i<6;i++){             //random selection
 //query selectors
 var questionBox=document.querySelector(".q-colorbox"); 
 var checkBox=document.querySelector(".colorbox");
+
 var colorList=[[document.querySelector("#r1"),document.querySelector("#r2"),document.querySelector("#r3")],[document.querySelector("#b1"),document.querySelector("#b2"),document.querySelector("#b3")],[document.querySelector("#g1"),document.querySelector("#g2"),document.querySelector("#g3")]];
 var answerbox=document.getElementById("answer").innerText;
+var coverPage=document.querySelector(".page-cover");
 
 for(let i=0;i<3;i++){
     x=Math.floor(Math.random()*3)
@@ -47,6 +50,7 @@ for(let i=0;i<3;i++){
 }
 
 questionBox.style.backgroundColor=questionColor;//set question color
+var clickCount=0;
 
 colorList[0][0].onclick =()=>getSend(0,0);
 colorList[0][1].onclick =()=>getSend(0,1);
@@ -62,6 +66,7 @@ colorList[2][2].onclick =()=>getSend(2,2);
 function getSend(x,y){
     var temp1=answerbox.split(" ");
     var temp2=colorList[x][y].innerText.split("");
+    clickCount++;
     switch (x){
         case 0:
             temp1[1]=temp2[0];
@@ -76,9 +81,25 @@ function getSend(x,y){
             temp1[6]=temp2[1];
             break;
     }
-    document.getElementById("answer").innerText=temp1[0]+" "+temp1[1]+" "+temp1[2]+" "+temp1[3]+" "+temp1[4]+" "+temp1[5]+" "+temp1[6];
-    answerbox=temp1[0]+" "+temp1[1]+" "+temp1[2]+" "+temp1[3]+" "+temp1[4]+" "+temp1[5]+" "+temp1[6];
-    var c="#"+ (temp1[1]=='_'?'0':temp1[1])+(temp1[2]=='_'?'0':temp1[2])+(temp1[3]=='_'?'0':temp1[3])+(temp1[4]=='_'?'0':temp1[4])+(temp1[5]=='_'?'0':temp1[5])+(temp1[6]=='_'?'0':temp1[6]);
-    document.getElementById("answer").style.backgroundColor=c;
+    var sendValue='#';
+    for(let i=1;i<7;i++){
+       sendValue += " "+ temp1[i];
+    }
+    var colorValue='#';//answer
+    for(let i=1;i<7;i++){
+        colorValue += (temp1[i]=='_'?'0':temp1[i]);
+     }
+     
+
+    document.getElementById("answer").innerText=sendValue;
+    answerbox=sendValue;
+    document.getElementById("answer").style.backgroundColor=colorValue;
+    checkColor=colorValue;
+    if(checkColor==questionColor){
+        coverPage.style.display="block";
+        document.querySelector(".click-number").innerText=clickCount;
+        document.querySelector(".winner").innerText=colorValue;
+    }
+    
 }
 

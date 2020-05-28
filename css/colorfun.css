@@ -24,6 +24,7 @@
     background: white;
     height: 75%;
     text-align: center;
+    border-bottom: dashed 2px black;
 }
 
 .q-colorbox p{
@@ -59,8 +60,102 @@ ul{
     margin-left: 2%;
 }
 
-.color-list li button{
-    
+.color-list li button,
+.color-list li button:focus{
+    outline: none;
     width: 30%;
     font-size: 2em;
+    border-radius: 1em;
+}
+
+.submit{
+    margin: auto;
+    text-align: center;
+    padding-top: .5em;
+}
+.submit button{
+    height:2em;
+    width: 7em;
+    font: 1em sans-serif;
+    background: center;
+    border-radius: 5em;
+    font-weight: bold;
+    background-color: rgb(65, 165, 65);
+}
+
+.submit button:hover{
+    background: rgba(255,255,255,0.5);
+    border: solid rgb(69, 122, 139) 2px;
+}
+.submit button:focus{
+    outline: none;
+}
+
+.page-cover{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(93, 230, 30, 0.9);
+    z-index: 10;
+    top:0;
+    display: none;
+    text-align: center;
+    padding-top: 10%;
+}
+.winner-text{
+    font-size: 2em;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    width: 50%;
+    margin: auto;
+    margin-bottom: .4em;
+    border-radius: 1em;
+}
+.winner{
+    font-weight: bold;
+    background: red;
+    width: 30%;
+    margin: auto;
+    font-size: 2.5em;
+    border-radius: 2em;
+}
+
+.cover-info{
+    
+    background: rgb(34, 167, 138);
+    border: solid lightgreen 4px;
+    border-radius: 2em;
+    width: 50%;
+    margin: auto;
+    height: 50%;
+    margin-top: 1em;
+
+}
+.cover-info h1{
+    padding-top: .5em;
+}
+
+.click-number{
+    color: wheat;
+    font-size: 6em;
+}
+.cover-info a{
+    text-decoration: none;
+    background: white;
+    padding: 8px ;
+    border-radius: 50%;
+    border: solid black 2px;
+    font-size: 1.5em;
+    margin: 2em;
+    margin-top: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 2px 2px 4px green;
+}
+
+.cover-info a:hover{
+    background: black;
+    color: white;
+    box-shadow: 2px 2px 4px white;
 }
