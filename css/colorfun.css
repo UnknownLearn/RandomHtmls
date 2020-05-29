@@ -24,7 +24,7 @@
     background: white;
     height: 75%;
     text-align: center;
-    border-bottom: dashed 2px black;
+    border: dashed 2px black;
 }
 
 .q-colorbox p{
@@ -32,7 +32,8 @@
 }
 .question-mark{
     font-size: 7em;
-    color: gray;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: gray;
 
 }
 #answer{
@@ -55,10 +56,16 @@ ul{
 .red{
     margin-left: 2.5%;
     margin-right: 2%;
+    
 }
 .green{
     margin-left: 2%;
 }
+.mob-prob{
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+}
+
 
 .color-list li button,
 .color-list li button:focus{
@@ -68,28 +75,8 @@ ul{
     border-radius: 1em;
 }
 
-.submit{
-    margin: auto;
-    text-align: center;
-    padding-top: .5em;
-}
-.submit button{
-    height:2em;
-    width: 7em;
-    font: 1em sans-serif;
-    background: center;
-    border-radius: 5em;
-    font-weight: bold;
-    background-color: rgb(65, 165, 65);
-}
 
-.submit button:hover{
-    background: rgba(255,255,255,0.5);
-    border: solid rgb(69, 122, 139) 2px;
-}
-.submit button:focus{
-    outline: none;
-}
+
 
 .page-cover{
     position: fixed;
@@ -115,7 +102,7 @@ ul{
 .winner{
     font-weight: bold;
     background: red;
-    width: 30%;
+    width: 40%;
     margin: auto;
     font-size: 2.5em;
     border-radius: 2em;
@@ -170,5 +157,17 @@ ul{
         color: wheat;
         font-size: 3em;
     }
+
+    .mob-prob{
+        font-size: 2em;
+    }
+    .color-list li button,
+    .color-list li button:focus{
+    outline: none;
+    width: 30%;
+    font-size: 1.5em;
+    border-radius: 1em;
+}
+
 
 }

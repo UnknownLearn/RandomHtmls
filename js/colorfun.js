@@ -18,7 +18,7 @@ for(let i=0;i<6;i++){             //random selection
 var questionBox=document.querySelector(".q-colorbox"); 
 var checkBox=document.querySelector(".colorbox");
 
-var colorList=[[document.querySelector("#r1"),document.querySelector("#r2"),document.querySelector("#r3")],[document.querySelector("#b1"),document.querySelector("#b2"),document.querySelector("#b3")],[document.querySelector("#g1"),document.querySelector("#g2"),document.querySelector("#g3")]];
+var colorList=[[document.querySelector("#r1"),document.querySelector("#r2"),document.querySelector("#r3")],[document.querySelector("#g1"),document.querySelector("#g2"),document.querySelector("#g3")],[document.querySelector("#b1"),document.querySelector("#b2"),document.querySelector("#b3")]];
 var answerbox=document.getElementById("answer").innerText;
 var coverPage=document.querySelector(".page-cover");
 
